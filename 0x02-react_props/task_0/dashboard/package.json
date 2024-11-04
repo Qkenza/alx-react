@@ -1,10 +1,8 @@
 {
   "name": "dashboard",
   "version": "0.1.0",
-  "homepage": "https://qkenza.github.io/alx-react",
   "private": true,
   "dependencies": {
-    "@cfaester/enzyme-adapter-react-18": "^0.8.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -14,13 +12,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "postdeploy": "echo 'Deployment complete!'"
+    "test": "jest",
+    "build": "webpack build --config ./config/webpack.config.js",
+    "start": "webpack-dev-server --mode development --config config/webpack.config.js"
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +35,15 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0"
-  }
+    "@cfaester/enzyme-adapter-react-18": "^0.8.0",
+    "image-webpack-loader": "^8.1.0",
+    "jest": "^27.5.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
